@@ -43,4 +43,6 @@ def predict():
     return render_template("index.html", prediction=result, image_path=path.replace('\\', '/'))
 
 if __name__ == "__main__":
-    app.run(debug=False, port=5000)
+    print("\n🚀 --- Server Locked & Running Continuously --- 🚀")
+    # debug=True এবংuse_reloader=False সার্ভারকে ক্র্যাশ বা ডিসকানেক্ট হওয়া থেকে পুরোপুরি আটকে রাখবে
+    app.run(debug=True, port=5000, use_reloader=False)
